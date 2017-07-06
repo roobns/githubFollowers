@@ -9,6 +9,10 @@
   "author": "Ruben Lazo Molina",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-webserver": "^0.9.1",
+    "opn": "^5.1.0"
   }
 }
