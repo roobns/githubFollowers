@@ -11,16 +11,33 @@
 		    </thead>
 		    <tbody>
 		        <tr ng-repeat="item in users | limitTo: 10">
-		            <td><img ng-src="{{item.avatar_url}}" alt="" width="30px"></td>
-		            <td>{{item.login}}</td>
-		            <td><a href="{{item.html_url}}" target="_blank"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a></td>
-		            <td><button type="button" class="btn btn-primary btn-xs" ng-click="openModal()">Launch demo modal
-		</button></td>
+		            <td class="center"><img ng-src="{{item.avatar_url}}" alt="" width="30px" ng-click="getFollowers(item.id)"></td>
+		            <td class="center">{{item.login}}</td>
+		            <td class="center"><a href="{{item.html_url}}" target="_blank"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a></td>
+		            <td class="center"><button type="button" class="btn btn-primary btn-xs" ng-click="selectUser(item.login)"><i class="fa fa-info-circle" aria-hidden="true"></i> User Info</button></td>
 		        </tr>
 		    </tbody>
 		</table>
 	</div>
-	<div class="col-md-6">
-		
+	<div class="col-md-6" ng-if="showDetails">
+		<div class="block">
+  		  <div class="top">
+		    <span>{{userSelected.login}}</span>
+		    <div class="pull-right">
+		    <i class="fa fa-times-circle fa-2x closeButton" aria-hidden="true" ng-click="hideDetails()"></i></div>
+		    </div>
+		  
+		  <div class="middle">
+		    <img ng-src="{{userSelected.avatar_url}}" alt="{{userSelected.login}}" class="imgProfile"/>
+		  </div>
+		  
+		  <div class="bottom">
+		    <div class="heading">{{userSelected.name}}</div>
+		    <div class="style">Website: <a href="{{userSelected.html_url}}">{userSelected.html_url}</a></div>
+		    <div class="style">Followers: {{userSelected.followers}}</div>
+		    <div class="style">Following: {{userSelected.following}}</div>
+		  </div>
+		  
+		</div>
 	</div>
 </div>
