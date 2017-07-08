@@ -24,7 +24,7 @@
   		  <div class="top">
 		    <span>{{userSelected.login}}</span>
 		    <div class="pull-right">
-		    <i class="fa fa-times-circle fa-2x closeButton" aria-hidden="true" ng-click="hideDetails()"></i></div>
+		    <i class="fa fa-window-close fa-2x closeButton" aria-hidden="true" ng-click="hideDetails()"></i></div>
 		    </div>
 		  
 		  <div class="middle">
@@ -33,7 +33,7 @@
 		  
 		  <div class="bottom">
 		    <div class="heading">{{userSelected.name}}</div>
-		    <div class="style">Website: <a href="{{userSelected.html_url}}">{userSelected.html_url}</a></div>
+		    <div class="style">Website: <a href="{{userSelected.html_url}}">{{userSelected.html_url}}</a></div>
 		    <div class="style">Followers: {{userSelected.followers}}</div>
 		    <div class="style">Following: {{userSelected.following}}</div>
 		  </div>

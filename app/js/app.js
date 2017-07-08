@@ -14,13 +14,20 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'mainCtrl'
         })
         .state('about', {
-            url: '/',
+            url: '/about',
             templateUrl: '../views/about.html',
             controller: 'aboutCtrl'
         })
         
         
 });
+
+
+app.controller('aboutCtrl', function($http, $scope) {
+
+
+
+    });
 
 app.controller('mainCtrl', function($http, $scope) {
 
